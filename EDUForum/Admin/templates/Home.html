@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EDUForum</title>
+
+
+    <!-- bootstrap cdn link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
+    <style>
+        {% load static %}
+
+header #maintxt {
+  color: white;
+}
+
+body{
+display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    background: #FFFFFF;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background:url("{% static 'images/home.jpeg' %}") no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #333;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 9%;
+}
+
+header .logo {
+  font-size: 33px;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+header .logo p {
+  color: white;
+  font-size: 40%;
+  text-align: center;
+}
+
+header .logo span {
+  color: var(--blue);
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+}
+
+header ul a {
+  margin: 0 5px;
+}
+
+header ul a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 8px 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+header ul a:hover,
+header ul a.active {
+  color: #1b1b1b;
+  background: #fff;
+}
+
+header .menu-btn {
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+
+#click {
+  display: none;
+}
+
+
+
+/*media for menu btn**/
+
+@media (max-width: 940px) {
+  header .menu-btn {
+    display: block;
+  }
+
+  #click:checked ~ .menu-btn i:before {
+    content: "\f00d";
+  }
+
+  header ul {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    display: block;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  #click:checked ~ ul {
+    left: 0%;
+  }
+
+  header ul a {
+    margin: 40px 0;
+  }
+
+  header ul a {
+    font-size: 20px;
+    display: block;
+  }
+
+  header ul a:hover,
+  header ul a.active {
+    color: cyan;
+    background: none;
+  }
+}
+
+header .icons i {
+  font-size: 2.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+header .icons i:hover {
+  color: var(--blue);
+}
+/* The dropdown container */
+.dropdown {
+  float: left;
+
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 8px 8px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #00B0FF;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+.transparent{
+background-color: rgba(5,4,2,0.1);
+width:850px;
+height: 100%;
+margin-left:auto;
+margin-right:auto;
+padding: 15px; }
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  font-size: 17px;
+}
+
+.container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.container img {vertical-align: middle;}
+
+.container .content {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+
+
+    </style>
+    <!-- custom css file link  -->
+    <!--<link rel="stylesheet" href="{% static 'CSS/style.css' %}">-->
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+  </head>
+<body>
+    <!-- header section starts  -->
+
+    <header>
+      <div class="logo">
+        <span>EDUForum</span>
+
+      </div>
+        <ul>
+        <a class="active" href="#"><li>Home</li></a>
+        <a href="ad/"><li>ASK Doubts</li></a>
+        <a href="placement/"><li>Placements</li></a>
+        <a href="gallery.html"><li>Events</li></a>
+<!--        <a href="#review"><li>Teachers</li></a>-->
+        <a href="insights/"><li>Insights</li></a>
+
+      </ul>
+        <div class="icons">
+            <div class="dropdown">
+                 <button class="dropbtn">
+                    <i class="fa fa-user"></i>
+                 </button>
+                    <div class="dropdown-content">
+                        <a href="lg/">Login</a>
+                        <a href="rg/">Register</a>
+                    </div>
+
+             </div>
+         </div>
+    </header>
+
+<!---------------------Carouse-starts-------------------------------->
+
+    <div
+      id="carouselExampleCaptions"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{% static 'images/library.jpg' %}" class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            <p>Some representative placeholder content for the first slide.</p>
+            <!-------------------button---------------------------------->
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'images/home1.jpg' %}" class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            <p>Some representative placeholder content for the second slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'images/home1.jpg' %}" class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            <p>Some representative placeholder content for the third slide.</p>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!---------------------Carousel-ends-------------------------------->
+
+
+</body>
+</html>

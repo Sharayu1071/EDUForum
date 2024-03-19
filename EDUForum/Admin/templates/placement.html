@@ -1,0 +1,355 @@
+{% load static %}
+
+<html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Placements Notification</title>
+    <link rel="stylesheet" href="{% static 'CSS/dashboard.css'%}">
+ <link rel="stylesheet" href="{% static 'CSS/style.css'%}" />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+        {% load static %}
+
+header #maintxt {
+  color: white;
+}
+
+body{
+display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    background: #FFFFFF;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background:url("{% static 'images/home.jpeg' %}") no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #333;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 9%;
+}
+
+header .logo {
+  font-size: 33px;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+header .logo p {
+  color: white;
+  font-size: 40%;
+  text-align: center;
+}
+
+header .logo span {
+  color: var(--blue);
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+}
+
+header ul a {
+  margin: 0 5px;
+}
+
+header ul a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 8px 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+header ul a:hover,
+header ul a.active {
+  color: #1b1b1b;
+  background: #fff;
+}
+
+header .menu-btn {
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+
+#click {
+  display: none;
+}
+
+
+
+/*media for menu btn**/
+
+@media (max-width: 940px) {
+  header .menu-btn {
+    display: block;
+  }
+
+  #click:checked ~ .menu-btn i:before {
+    content: "\f00d";
+  }
+
+  header ul {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    display: block;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  #click:checked ~ ul {
+    left: 0%;
+  }
+
+  header ul a {
+    margin: 40px 0;
+  }
+
+  header ul a {
+    font-size: 20px;
+    display: block;
+  }
+
+  header ul a:hover,
+  header ul a.active {
+    color: cyan;
+    background: none;
+  }
+}
+
+header .icons i {
+  font-size: 2.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+header .icons i:hover {
+  color: var(--blue);
+}
+/* The dropdown container */
+.dropdown {
+  float: left;
+
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 8px 8px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #00B0FF;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+.transparent{
+background-color: rgba(5,4,2,0.1);
+width:850px;
+height: 100%;
+margin-left:auto;
+margin-right:auto;
+padding: 15px; }
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  font-size: 17px;
+}
+
+.container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.container img {vertical-align: middle;}
+
+.container .content {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+body{
+   background-color: #f3f3f3;
+}
+
+.content{
+  background-color: rgb(158, 241, 241);
+  height: 100%;
+  width: 100%;
+  margin-top: 40px;
+
+}
+
+
+
+
+
+.link-btn {
+  display: inline-block;
+  background: rgb(34, 33, 33);
+  color: white;
+  border-radius: 20px;
+  padding: 15px 15px;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-left: 20px;
+ text-decoration: none;
+}
+
+
+</style>
+
+<body>
+
+
+<header>
+      <div class="logo">
+        <span>EDUF</span>orum
+
+      </div>
+        <ul>
+        <a  href="{% url 'home'%}"><li>Home</li></a>
+        <a href="askdoubt/"><li>ASK Doubts</li></a>
+        <a class="active" href="placement/"><li>Placements</li></a>
+        <a href="events.html"><li>Events</li></a>
+        <a href="teachers"><li>Teachers</li></a>
+        <a href="dashboard/"><li>Dashboard</li></a>
+       <!-- <img src="{% static 'Admin/images/profile.png' %}" alt="Avatar" class="avatar">-->
+      </ul>
+        <div class="icons">
+            <div class="dropdown">
+                 <button class="dropbtn">
+                    <!--<i class="fa fa-caret-down"></i>-->
+                 </button>
+                    <div class="dropdown-content">
+                        <a href="login/">Login</a>
+                        <a href="rg/">Register</a>
+                    </div>
+                <a href="dashboard/"> <i class="fas fa-user" id="login-btn"></i> </a>
+             </div>
+         </div>
+
+
+    </header>
+
+<div class="content">
+
+        <center>
+
+        <br><br><br>
+            <br><br><br>
+            <br><br><br>
+        <h1>Notifications</h1>
+         <p></p> <br>
+
+         <section class="mid">
+
+          <a href="#" class="link-btn">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate, excepturi.</a> <br>
+          <a href="#" class="link-btn">Lorem ipsum dolor sit Lorem ipsum dolor sit amet. </a> <br>
+          <a href="#" class="link-btn">Lorem ipsum dolor sit Lorem ipsum dolor sit amet. </a> <br>
+
+          <a href="#" class="link-btn">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate, excepturi.</a> <br>
+          <a href="#" class="link-btn">Lorem ipsum dolor sit Lorem ipsum dolor sit amet. </a> <br>
+          <a href="#" class="link-btn">Lorem ipsum dolor sit Lorem ipsum dolor sit amet. </a> <br>
+
+          <a href="#" class="link-btn">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate, excepturi.</a> <br>
+          <a href="#" class="link-btn">Lorem ipsum dolor sit Lorem ipsum dolor sit amet. </a> <br>
+          <a href="#" class="link-btn">Lorem ipsum dolor sit Lorem ipsum dolor sit amet. </a> <br>
+
+          <a href="#" class="link-btn">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate, excepturi.</a> <br>
+          <a href="#" class="link-btn">Lorem ipsum dolor sit Lorem ipsum dolor sit amet. </a> <br>
+          <a href="#" class="link-btn">Lorem ipsum dolor sit Lorem ipsum dolor sit amet. </a> <br>
+         </section>
+
+  </center>
+</div>
+
+
+
+<!--            &lt;!&ndash;{% for plc in placement %}-->
+<!--                <h2>{{plc.username}}</h2>-->
+<!--                <h2>{{plc.email}}</h2>-->
+<!--            {% endfor %}&ndash;&gt;-->
+
+<!--           {% for post in file %}-->
+<!--           <h2>{{post.title}}</h2>-->
+<!--           <a href = "{{post.adminupload.url}}" download="{{post.adminupload.url}}">Placement Update</a>-->
+<!--           {% endfor %}-->
+
+</body>
+</html>

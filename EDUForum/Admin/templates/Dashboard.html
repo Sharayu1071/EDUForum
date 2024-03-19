@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+	<meta charset="UTF-8">
+	<title>Student Dashboard</title>
+	<link rel="stylesheet" href="styles.css">
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+body{
+   background-color: #f3f3f3;
+}
+
+.wrapper{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 90%;
+  height: 80%;
+  display: flex;
+  box-shadow: 0 1px 80px 0 rgba(69,90,100,.08);
+}
+
+.wrapper .left{
+  width: 20%;
+  background: linear-gradient(to right,#85f1f3,#5be7f1);
+  padding: 30px 25px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  text-align: center;
+  color: #fff;
+}
+
+.wrapper .left img{
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.wrapper .left h4{
+  margin-bottom: 10px;
+}
+
+.wrapper .left p{
+  font-size: 12px;
+}
+
+.wrapper .right{
+  width: 80%;
+  background: #fff;
+  padding: 30px 25px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.wrapper .right .info,
+.wrapper .right .projects{
+  margin-bottom: 25px;
+}
+
+.wrapper .right .info h3,
+.wrapper .right .projects h3{
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #e0e0e0;
+    color: #353c4e;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.wrapper .right .info_data,
+.wrapper .right .projects_data{
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper .right .info_data .data,
+.wrapper .right .projects_data .data{
+  width: 45%;
+}
+
+.wrapper .right .info_data .data h4,
+.wrapper .right .projects_data .data h4{
+    color: #353c4e;
+    margin-bottom: 5px;
+}
+
+.wrapper .right .info_data .data p,
+.wrapper .right .projects_data .data p{
+  font-size: 13px;
+  margin-bottom: 10px;
+  color: #919aa3;
+}
+
+.wrapper .social_media ul{
+  display: flex;
+}
+
+.wrapper .social_media ul li{
+  width: 80%;
+  height: 85px;
+  background: black;
+  margin-right: 50px;
+  border-radius: 5px;
+
+  line-height: 45px;
+
+}
+
+.wrapper .social_media ul li a{
+  padding-top: 20px;
+  color :#fff;
+  display: block;
+  font-size: 18px;
+  text-decoration: none;
+  text-align: center;
+}
+
+
+
+
+
+.link-btn {
+  display: inline-block;
+  background: rgb(34, 33, 33);
+  color: white;
+  border-radius: 20px;
+  padding: 15px 15px;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-left: 20px;
+ text-decoration: none;
+}
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="left">
+        <img src="{% static 'images/alex.png' %}"
+        alt="user" width="100" height="100">
+        <h2>Alex Joe</h2>
+         <p></p> <br><br><br>
+
+         <section class="mid">
+
+          <a href="#" class="link-btn">Notifications</a>
+          <a href="#" class="link-btn">Things To Do</a>
+
+          <a href="#" class="link-btn">Ask Doubt</a>
+          <a href="#" class="link-btn">Deadlines</a>
+
+
+
+   </section>
+
+
+
+    </div>
+    <div class="right">
+        <div class="info">
+            <h3>Information</h3>
+            <div class="info_data">
+                 <div class="data">
+                    <h4>ID No</h4>
+                    <p>1234</p>
+                 </div>
+
+                   <div class="data">
+                   <h4>Gender</h4>
+                    <p>Male</p>
+              </div>
+
+            </div>
+        </div>
+
+        <div class="projects">
+          <div class="projects_data">
+            <div class="data">
+              <h4>First Name</h4>
+              <p>Alex</p>
+           </div>
+           <div class="data">
+              <h4>Last Name</h4>
+              <p>Joe</p>
+           </div>
+          </div>
+      </div>
+
+        <div class="projects">
+          <div class="projects_data">
+            <div class="data">
+              <h4>Branch</h4>
+               <p>Computer</p>
+         </div>
+            <div class="data">
+              <h4>Year</h4>
+               <p>Third </p>
+         </div>
+          </div>
+      </div>
+
+      <div class="projects">
+        <div class="projects_data">
+          <div class="data">
+            <h4>Student Mobile No</h4>
+             <p>1478523691</p>
+       </div>
+          <div class="data">
+            <h4>Parent Mobile No</h4>
+             <p>7894561231</p>
+       </div>
+        </div>
+    </div>
+
+
+      <div class="projects">
+        <div class="projects_data">
+          <div class="data">
+            <h4>Date of Birth</h4>
+             <p>1 Jan 2001</p>
+       </div>
+          <div class="data">
+            <h4>Address</h4>
+             <p>Lorem ipsum dolor sit amet</p>
+       </div>
+        </div>
+    </div>
+
+
+
+        <div class="social_media">
+            <ul>
+              <li><a href="#">Notes</a></li>
+              <li><a href="#">Result</a></li>
+              <li><a href="#">Syllabus</a></li>
+              <li><a href="#">Placement</a></li>
+              <li><a href="#">Events</a></li>
+              <li><a href="#">A Calender</a></li>
+
+
+
+          </ul>
+      </div>
+    </div>
+</div>
+
+</body>
+</html>

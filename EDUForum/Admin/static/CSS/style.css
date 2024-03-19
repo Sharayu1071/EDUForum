@@ -1,0 +1,141 @@
+{% load static %}
+
+header #maintxt {
+  color: white;
+}
+
+body{
+display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    background: #FFFFFF;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background:url("{% static 'images/home.jpeg' %}") no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #333;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 9%;
+}
+
+header .logo {
+  font-size: 33px;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+header .logo p {
+  color: white;
+  font-size: 40%;
+  text-align: center;
+}
+
+header .logo span {
+  color: var(--blue);
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+}
+
+header ul a {
+  margin: 0 5px;
+}
+
+header ul a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 8px 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+header ul a:hover,
+header ul a.active {
+  color: #1b1b1b;
+  background: #fff;
+}
+
+header .menu-btn {
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+
+#click {
+  display: none;
+}
+
+
+
+/*media for menu btn**/
+
+@media (max-width: 940px) {
+  header .menu-btn {
+    display: block;
+  }
+
+  #click:checked ~ .menu-btn i:before {
+    content: "\f00d";
+  }
+
+  header ul {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    display: block;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  #click:checked ~ ul {
+    left: 0%;
+  }
+
+  header ul a {
+    margin: 40px 0;
+  }
+
+  header ul a {
+    font-size: 20px;
+    display: block;
+  }
+
+  header ul a:hover,
+  header ul a.active {
+    color: cyan;
+    background: none;
+  }
+}
+
+header .icons i {
+  font-size: 2.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+header .icons i:hover {
+  color: var(--blue);
+}
